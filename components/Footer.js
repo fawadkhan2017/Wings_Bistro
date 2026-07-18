@@ -1,34 +1,62 @@
 function Footer() {
     return (
-        <footer className="bg-[#050505] pt-16 pb-8 border-t border-white/5" data-name="footer" data-file="components/Footer.js">
+        <footer
+            className="bg-[#050505] pt-16 pb-8 border-t border-white/5"
+            data-name="footer"
+            data-file="components/Footer.js"
+        >
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
-                    
-                    {/* Brand Column */}
-                    <div className="lg:w-1/4">
-                        <div className="flex items-center gap-3 mb-6">
-                        <div className="flex items-center gap-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] rounded" tabIndex="0">
-                    <img src="https://app.trickle.so/storage/public/images/usr_21de9f9418000001/5abbbc1d-699e-447b-98fa-98cf5e81c0ed.png" alt="The Wings Bistro Logo" className="h-16 object-contain" />
-                </div>
+
+                <div className="flex flex-col lg:flex-row gap-12 mb-12">
+
+                    {/* ================= Brand ================= */}
+                    <div className="lg:w-1/4 flex flex-col items-center lg:items-start text-center lg:text-left">
+
+                        <div className="mb-6">
+                            <img
+                                src="../assets/images/5abbbc1d-699e-447b-98fa-98cf5e81c0ed.png"
+                                alt="The Wings Bistro Logo"
+                                className="h-16 object-contain mx-auto lg:mx-0"
+                            />
                         </div>
-                        <p className="text-gray-300 text-sm mb-6 leading-relaxed">
-                            Bold flavor. Real crunch.<br/>The taste that brings you back.
+
+                        <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                            Bold flavor. Real crunch.
+                            <br />
+                            The taste that brings you back.
                         </p>
-                        <div className="flex gap-5">
-                            <a href="#" className="text-white hover:text-[var(--primary)] transition-colors"><div className="icon-facebook text-xl"></div></a>
-                            <a href="#" className="text-white hover:text-[var(--primary)] transition-colors"><div className="icon-instagram text-xl"></div></a>
+
+                        {/* Social Icons */}
+                        <div className="flex justify-center lg:justify-start gap-5">
                             <a href="#" className="text-white hover:text-[var(--primary)] transition-colors">
-                                {/* Using music for Tiktok representation if TikTok icon unavailable, but checking standard */}
-                                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                            <i className="fa-brands fa-facebook-f text-xl"></i>
                             </a>
-                            <a href="#" className="text-white hover:text-[var(--primary)] transition-colors"><div className="icon-youtube text-xl"></div></a>
+
+                            <a href="#" className="text-white hover:text-[var(--primary)] transition-colors">
+                            <i className="fa-brands fa-instagram text-xl"></i>
+                            </a>
+
+                            <a href="#" className="text-white hover:text-[var(--primary)] transition-colors">
+                                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                                </svg>
+                            </a>
+
+                            <a href="#" className="text-white hover:text-[var(--primary)] transition-colors">
+                                <div className="icon-youtube text-xl"></div>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div className="lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+                    {/* ================= Links ================= */}
+                    <div className="lg:w-3/4 grid grid-cols-2 lg:grid-cols-4 gap-8">
+
                         {/* Quick Links */}
                         <div>
-                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">QUICK LINKS</h4>
+                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">
+                                QUICK LINKS
+                            </h4>
+
                             <ul className="space-y-2 text-gray-300 text-[13px]">
                                 <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
                                 <li><a href="#" className="hover:text-white transition-colors">Menu</a></li>
@@ -40,10 +68,13 @@ function Footer() {
                                 <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
                             </ul>
                         </div>
-                        
+
                         {/* Menu */}
-                        <div className="border-l border-white/5 pl-0 md:pl-8">
-                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">MENU</h4>
+                        <div className="lg:border-l lg:border-white/5 lg:pl-8">
+                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">
+                                MENU
+                            </h4>
+
                             <ul className="space-y-2 text-gray-300 text-[13px]">
                                 <li><a href="#" className="hover:text-white transition-colors">Wings</a></li>
                                 <li><a href="#" className="hover:text-white transition-colors">Combos</a></li>
@@ -52,10 +83,13 @@ function Footer() {
                                 <li><a href="#" className="hover:text-white transition-colors">Sauces</a></li>
                             </ul>
                         </div>
-                        
+
                         {/* Company */}
-                        <div className="border-l border-white/5 pl-0 md:pl-8">
-                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">COMPANY</h4>
+                        <div className="lg:border-l lg:border-white/5 lg:pl-8">
+                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">
+                                COMPANY
+                            </h4>
+
                             <ul className="space-y-2 text-gray-300 text-[13px]">
                                 <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
                                 <li><a href="#" className="hover:text-white transition-colors">Franchise</a></li>
@@ -64,36 +98,43 @@ function Footer() {
                                 <li><a href="#" className="hover:text-white transition-colors">Terms & Conditions</a></li>
                             </ul>
                         </div>
-                        
-                        {/* Contact Us */}
-                        <div className="border-l border-white/5 pl-0 md:pl-8">
-                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">CONTACT US</h4>
+
+                        {/* Contact */}
+                        <div className="lg:border-l lg:border-white/5 lg:pl-8">
+                            <h4 className="font-heading font-bold text-[var(--primary)] text-sm uppercase mb-4 tracking-wide">
+                                CONTACT US
+                            </h4>
+
                             <ul className="space-y-4 text-gray-300 text-[13px]">
                                 <li className="flex items-center gap-3">
-                                    <div className="icon-phone text-white text-base"></div> 
+                                    <div className="icon-phone text-white text-base"></div>
                                     <span>+1 (647) 123-4567</span>
                                 </li>
+
                                 <li className="flex items-center gap-3">
-                                    <div className="icon-mail text-white text-base"></div> 
+                                    <div className="icon-mail text-white text-base"></div>
                                     <span>info@thewingsbistro.com</span>
                                 </li>
+
                                 <li className="flex items-start gap-3">
-                                    <div className="icon-clock text-white text-base mt-0.5"></div> 
+                                    <div className="icon-clock text-white text-base mt-0.5"></div>
                                     <span>Mon - Sun: 11:00 AM - 11:00 PM</span>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
+
                 </div>
-                
-                <div className="pt-6 flex justify-center text-center">
-                    <p className="text-gray-400 text-xs">
-                        &copy; 2026 The Wings Bistro. All Rights Reserved.
+
+                {/* ================= Copyright ================= */}
+                <div className="border-t border-white/5 pt-6">
+                    <p className="text-center text-gray-400 text-xs">
+                        © 2026 The Wings Bistro. All Rights Reserved.
                     </p>
                 </div>
+
             </div>
         </footer>
     );
 }
-
-
